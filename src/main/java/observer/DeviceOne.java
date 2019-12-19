@@ -4,7 +4,7 @@ public class DeviceOne extends Device {
 
   public DeviceOne(Sensor sensor) {
   this.sensor = sensor;
-  this.sensor.suscribe(this);
+//  this.sensor.suscribe(this);
   }
 
   @Override
