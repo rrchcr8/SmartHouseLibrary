@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+target
+SmartHouseLibrary.iml
+.gitignore
+src/main/resources/
+target/generated-sources/
+target/generated-test-sources/
