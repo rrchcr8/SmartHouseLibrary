@@ -8,6 +8,9 @@ public class DeviceTwo extends Device {
 
   @Override
   public void update() {
-    System.out.println( "notificacion recibida D2 " + sensor.getState() );
+    Message message = sensor.getMessage();
+    if (message instanceof StringMessage){
+      System.out.println( "notificacion recibida D2 " + ((StringMessage) message).getString() );
+    }
   }
 }

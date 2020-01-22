@@ -8,6 +8,10 @@ public class DeviceOne extends Device {
 
   @Override
   public void update() {
-    System.out.println( "notificacion recibida D1 " + sensor.getState() );
+    Message message = sensor.getMessage();
+    if (message instanceof StringMessage){
+      System.out.println( "notificacion recibida D1 " + ((StringMessage) message).getString() );
+    }
+
   }
 }

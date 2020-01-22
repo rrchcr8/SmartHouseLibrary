@@ -1,18 +1,21 @@
 package observer;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Observer;
 
 public class Sensor {
-  private List<Device> devices = new ArrayList<Device>();
-  private String state;
+  private List<Device> devices;
+  Message message;
 
-  public String getState() {
-    return state;
+  Sensor() {
+    devices = new ArrayList<Device>();
   }
 
-  public void setState(String state) {
-    this.state = state;
+  public Message getMessage() {
+    return message;
+  }
+
+  public void setMessage(Message message) {
+    this.message = message;
     notifyAllDevices();
   }
 
