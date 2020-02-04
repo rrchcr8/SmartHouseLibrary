@@ -4,8 +4,8 @@ public class PatternDemo {
   public static void main(String[] args) {
     Sensor sensor = new Sensor();
 
-    Device d1 = new DeviceOne(sensor);
-    Device d2 = new DeviceTwo(sensor);
+    Device d1 = new DeviceOne();
+    Device d2 = new DeviceTwo();
 
     sensor.suscribe(d1);
     sensor.suscribe(d2);

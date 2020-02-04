@@ -16,7 +16,7 @@ public class Sensor {
 
   public void setMessage(Message message) {
     this.message = message;
-    notifyAllDevices();
+    notifyAllDevices(message);
   }
 
     public void suscribe(Device device){
@@ -26,9 +26,9 @@ public class Sensor {
     devices.remove(device);
   }
 
-    public void notifyAllDevices(){
+    public void notifyAllDevices(Message message){
       for (Device device : devices) {
-        device.update();
+        device.update(message);
       }
     }
 
