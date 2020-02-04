@@ -1,4 +1,7 @@
-package observer;
+package example;
+
+import base.Device;
+import base.Message;
 
 public class DeviceTwo extends Device {
 

@@ -1,14 +1,21 @@
-package observer;
 
-public class PatternDemo {
-  public static void main(String[] args) {
+package example;
+
+import base.Device;
+import base.Sensor;
+
+final class PatternDemo {
+  private PatternDemo() {
+  }
+
+  public static void main(final String[] args) {
     Sensor sensor = new Sensor();
 
     Device d1 = new DeviceOne();
     Device d2 = new DeviceTwo();
 
-    sensor.suscribe(d1);
-    sensor.suscribe(d2);
+    sensor.subscribe(d1);
+    sensor.subscribe(d2);
 
     System.out.println("First state change: A");
     sensor.setMessage(new StringMessage("A"));

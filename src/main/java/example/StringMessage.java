@@ -1,4 +1,6 @@
-package observer;
+package example;
+
+import base.Message;
 
 public class StringMessage implements Message {
 
