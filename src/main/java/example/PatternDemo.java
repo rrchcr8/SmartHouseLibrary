@@ -9,7 +9,7 @@ final class PatternDemo {
   }
 
   public static void main(final String[] args) {
-    Sensor sensor = new Sensor();
+    Sensor sensor = new SensorA();
 
     Device d1 = new DeviceOne();
     Device d2 = new DeviceTwo();

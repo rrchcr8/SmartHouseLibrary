@@ -3,7 +3,7 @@ package base;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sensor {
+public abstract class Sensor {
     /**
      * List of devices subscribed.
      */
@@ -17,24 +17,34 @@ public class Sensor {
 
     /**
      * This a send message Method.
+     * You can use this method or implement one by your one.
      * @param message any data type that the sensor can send.
      */
-    public void setMessage(Message message) {
+    public void setMessage(final Message message) {
         notifyAllDevices(message);
     }
 
     /**
-     * This method aloud users to susbcribe to this sensor.
+     * This method aloud users to subscribe to this sensor.
      * @param device Its a device that will subscribe to this sensor.
      */
-    public void subscribe(Device device) {
+    public void subscribe(final Device device) {
         devices.add(device);
     }
-    public void removeDevice(Device device){
+
+    /**
+     * This method aloud users to unsubscribe to this sensor.
+     * @param device
+     */
+    public void removeDevice(final Device device) {
         devices.remove(device);
     }
 
-    public void notifyAllDevices(Message message){
+    /**
+     * This method notifies to all de subscribe devices.
+     * @param message can be any data type.
+     */
+    public void notifyAllDevices(final Message message) {
         for (Device device : devices) {
             device.update(message);
         }
