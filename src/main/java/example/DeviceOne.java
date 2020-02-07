@@ -4,7 +4,7 @@ package example;
 import base.Device;
 import base.Message;
 
-public class DeviceOne extends Device {
+public class DeviceOne implements Device {
   /**
    * WHAT DOES THE FOX SAY?
    * @param message would be any kind of data type.

@@ -4,7 +4,7 @@ package example;
 import base.Device;
 import base.Message;
 
-public class DeviceTwo extends Device {
+public class DeviceTwo implements Device {
 
   /**
    * Update method for device number 2.
