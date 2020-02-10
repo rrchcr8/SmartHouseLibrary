@@ -5,18 +5,31 @@ import base.Device;
 import base.Message;
 
 public class DeviceOne implements Device {
-  /**
-   * WHAT DOES THE FOX SAY?
-   * @param message would be any kind of data type.
-   * (String, integer, boolean, etc).
-   * Design to be implemented.
-   * */
-  @Override
-  public void update(final Message message) {
-    if (message instanceof StringMessage) {
-      System.out.println("notificacion recibida D1 "
-              + ((StringMessage) message).getString());
+    /**
+     * This is the state of the device that will be changed
+     * according to the sensor device.
+     */
+    private String deviceOneState;
+    /**
+     * Update method for device number 1.
+     * @param message would be any kind of data type.
+     * (String, integer, boolean, etc).
+     * Design to be implemented.
+     * */
+    @Override
+    public void update(final Message message) {
+        if (message instanceof StringMessage) {
+            deviceOneState = ((StringMessage) message).getString();
+        }
+
     }
 
-  }
+    /**
+     * Its a common getter.
+     * @return device one State field.
+     */
+    public String getDeviceOneState() {
+        return deviceOneState;
+    }
+
 }
