@@ -1,4 +1,4 @@
-package observer;
+package base;
 
 public interface Message {
 
